@@ -1,25 +1,26 @@
-import logo from './logo.svg';
+import {Routes, Route} from 'react-router-dom'
+import All from './pages/All';
+import JobDetails from './pages/JobDetails';
+
+// import { useFetch } from './hooks/useFetch';
+// import {useParams} from 'react-router-dom'
+
+//styles
 import './App.css';
 
+
 function App() {
+  
+  // const {id} = useParams()
+  // const {data: jobs, isPending, error} = useFetch()
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    
+    <Routes>
+      <Route  path='/' element={<All />}/>
+      <Route path='/:id' element={<JobDetails />}/> 
+    </Routes>
+  )
 }
 
 export default App;

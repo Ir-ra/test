@@ -1,0 +1,216 @@
+/* body{
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    background: #E6E9F2;  
+  } */
+.details h1 {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: 0.413333px;
+    border-bottom: 1px solid #ddd;
+}
+
+.container2 {
+    background: #ffffff;
+    color: #3A4562;
+    padding: 24px 15px;
+    /* width: 800px;  */
+}
+
+.container2 .card {
+    padding-bottom: 30px;
+}
+
+.details .card span {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.5625px;
+    color: rgba(56, 65, 93, 0.82);
+}
+
+.container2 .salary {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+}
+
+/* .container2 .card .salary p {
+    margin: 0;
+} */
+
+.container2 .card h2 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: -0.75px;
+}
+
+.container2 .card h3 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.625px;
+
+    margin-top: 0px;
+
+}
+
+.container2 .card p {
+
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.5625px;
+    font-stretch: 100;
+    color: rgba(56, 65, 93, 0.82);
+
+    /* margin-top: 0px; */
+}
+
+.container2 button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 5px auto 20px;
+    background: #384564;
+    border-radius: 8px;
+    width: 67px;
+    height: 16px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 18px 40px;
+    gap: 10px;
+    color: #FFFFFF;
+}
+
+.details ul {
+    list-style-type: square;
+    /* background: rgba(56, 69, 100, 0.632594); */
+}
+
+.details .imgs .attach {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+
+    /* display: grid;
+    grid-template-columns: 1fr 1fr  1fr;
+    column-gap: 10px; */
+    /* width: 200px;  */
+}
+
+.details .imgs img {
+    width: 200px;
+    height: 116px;
+    object-fit: cover;
+    margin-left: 10px;
+}
+
+.details .btns {
+    box-sizing: border-box;
+}
+
+/* .details .btns {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    justify-items: center;
+}
+.details .btns div{
+    padding: 10px;
+    margin: 5px 10px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: -0.457143px;
+    color: #55699E;
+    background: rgba(161, 177, 219, 0.317343);
+    border: 1px solid rgba(85, 105, 158, 0.3);
+    border-radius: 8px
+}
+.details .btns .btns2 div{
+    background: rgba(255, 207, 0, 0.15);
+    border: 1px solid #FFCF00;
+    color: #988B49; 
+} */
+
+.details .btns button {  
+    
+    display: inline-flex;
+    padding: 0 auto;
+    margin: 5px 10px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: -0.457143px;
+    color: #55699E;
+    background: rgba(161, 177, 219, 0.317343);
+    border: 1px solid rgba(85, 105, 158, 0.3);
+    border-radius: 8px;
+}
+
+.details .btns2 button {
+    background: rgba(255, 207, 0, 0.15);
+    border: 1px solid #FFCF00;
+    color: #988B49;
+}
+
+.contacts {
+    width: 300px;
+    height: 400px;
+    background: #2A3047;
+    border-radius: 8px;
+    justify-content: center;
+}
+
+.contact{
+    color: #ddd;
+    /* font-weight: 700; */
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.23619px;
+    color: #E7EAF0;
+    padding: 15px 30px ;
+}
+
+.contact img{
+   
+    color: rgb(230, 230, 230);
+}
+
+
+
+
+/*------------- MAP -------------*/
+.map-container {
+    width: 300px;
+    height: 200px;
+}
+
+.sidebar {
+    background-color: rgba(35, 55, 75, 0.9);
+    color: #fff;
+    padding: 6px 12px;
+    font-family: monospace;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 12px;
+    border-radius: 4px;
+}
+
+.mapboxgl-ctrl {
+    display: none;
+    /* visibility: hidden; */
+}
