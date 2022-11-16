@@ -1,21 +1,45 @@
-/* body{
-    font-family: 'Proxima Nova';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 25px;
-    background: #E6E9F2;  
-  } */
-  .details {
+.details {
     background:  #ffffff;
-    
-    /* display: grid; */
-    /* grid-template-columns: 1fr 1fr; */
-  }
-  
- 
-  
- 
+}
+.box1 {
+   display:block;
+   /* display:inline-flex; */
+   
+   
+}
+.box1 .box1_b{
+    display: inline-flex;
+   
+    mix-blend-mode: normal;
+    opacity: 0.8;
+    font-weight: 400;
+font-size: 16px;
+line-height: 23px;
+text-align: center;
+letter-spacing: -0.5px;
+color: rgba(56, 65, 93, 0.82);
+overflow: hidden;
+}
+.box1 .box1_b img{
+   width: 40px;
+   height: 40px;
+}
+.box1 .box1_b p{
+    margin: 0;
+    padding-top: 10px;
+   
+}
+
+#share{
+transform: scale(0.8);
+margin-left: 30px;
+opacity: 0.8;
+
+}
+
+.box2{
+   display: flex;
+}
 
 .details h1 {
     font-weight: 700;
@@ -28,11 +52,9 @@
 .details .container3 {
     background: #ffffff;
     color: #3A4562;
-    padding: 24px 15px;
+    padding: 24px 15px 0;
     order: 1;
-    
 }
-
 
 .container3 .card {
     padding-bottom: 30px;
@@ -52,8 +74,6 @@
     position: relative;
 }
 
-
-
 .container3 .card h2 {
     font-weight: 700;
     font-size: 24px;
@@ -66,20 +86,15 @@
     font-size: 20px;
     line-height: 25px;
     letter-spacing: -0.625px;
-
     margin-top: 0px;
-
 }
 
 .container3 .card p {
-
     font-size: 18px;
     line-height: 24px;
     letter-spacing: -0.5625px;
     font-stretch: 100;
     color: rgba(56, 65, 93, 0.82);
-
-    /* margin-top: 0px; */
 }
 
 .container3 button {
@@ -104,19 +119,19 @@
 
 .details ul {
     list-style-type: square;
-    /* background: rgba(56, 69, 100, 0.632594); */
 }
+
+/* .imgs{
+    order: 1;
+}
+.info{
+    order: 2;
+} */
 
 .details .imgs .attach {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-
-
-    /* display: grid;
-    grid-template-columns: 1fr 1fr  1fr;
-    column-gap: 10px; */
-    /* width: 200px;  */
 }
 
 .details .imgs img {
@@ -182,7 +197,6 @@
     background: #2A3047;
     border-radius: 8px;
     justify-content: center;
-    /* display: inline-flex; */
     display: flex;
     margin: 24px 15px;
     order: 2;
@@ -202,50 +216,59 @@
    color: rgb(230, 230, 230);
 }
 
-
-
-
 /*------------- MAP -------------*/
 .map-container {
     width: 300px;
     height: 200px;
 }
 
-.sidebar {
-    background-color: rgba(35, 55, 75, 0.9);
-    color: #fff;
-    padding: 6px 12px;
-    font-family: monospace;
-    z-index: 1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin: 12px;
-    border-radius: 4px;
-}
-
 .mapboxgl-ctrl {
     display: none;
 }
 
-
+/*------------- MEDIA -------------*/
 @media (min-width:800px) {
     .container3{
         width: 700px;
     }
     
+    .box2 h2{
+        width: 500px;
+        padding-right: 70px;
+        }
 }
+
 @media (min-width:1015px) {
     #contactH1{
         display: none;
     }
+    
     .container1{
         display:flex;
-      }
+    }
+
+      .container3 button{
+        margin: 30px 0px;
+    }
 }
+
 @media (min-width:1240px) {
     .container3{
         margin-left: 300px;
     }
-      
+}
+
+@media (max-width:1015px) {
+    #Bone{
+        display: none; 
+    }
+
+    #addInfo{
+        display: none;
+    } 
+
+    .box2{
+        display: block;
+    }
+  
 }

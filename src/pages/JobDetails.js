@@ -4,6 +4,8 @@ import './JobDetails.css'
 import { useParams } from 'react-router-dom'
 import Map from './Map';
 import location from '../assets/location.svg'
+import star from '../assets/star.svg'
+import share from '../assets/share.svg'
 
 function JobDetails() {
     const { id } = useParams()
@@ -19,14 +21,32 @@ function JobDetails() {
 
                     <div className='container3'>
                         <div className='card'>
-                            <h1>Job Details</h1>
-                            <h2>{job.title}</h2>
-
-                            <div className='salary'>
-                                <p>Brutto, per year</p>
-                                <h3>&#8364; {job.salary}</h3>
+                        
+                        <div className='box1'>
+                        <h1>Job Details</h1>
+                        {/* separator */}
+                            <div className='box1_a'>
+                            
+                            
+                            <div className='box1_b'>
+                                
+                                <img src={star}/><p>Save to my list</p>
+                                <img id='share' src={share}/><p>Share</p>
+                                
                             </div>
+                            </div>
+                        </div>
 
+                            <button id='Bone'>Apply now</button>
+                            
+                            <div className='box2'>
+                                <h2>{job.title}</h2>
+
+                                <div className='salary'>
+                                    <p>Brutto, per year</p>
+                                    <h3>&#8364; {job.salary}</h3>
+                                </div>
+                            </div>
 
                             <div className='responsibilities'>
                                 <h3>Responsibilities</h3>
@@ -44,14 +64,16 @@ function JobDetails() {
                             </div>
 
 
-                            <button>Apply now</button>
+                            <button id='Btwo'>Apply now</button>
 
                             </div>
                             <div>
-
+                                  
                                 <div className='imgs'>
+                              
                                     <h1>Attached images</h1>
                                     <div className='attach'>
+                                    
                                         {job.pictures.map(img =>
                                             <img src={img} />
                                         )}
@@ -62,10 +84,10 @@ function JobDetails() {
                                     <h1>Additional info</h1>
                                     <span>Employment type</span>
                                     <div className='btns'>
-                                        <button>Full-time</button>
-                                        <button>Part time</button>
-                                        <button>Temporary</button>
-
+                                        {job.employment_type.map(jb =>
+                                                    <button>{jb}</button>
+                                                )}
+                                       
                                         <p>Benefits</p>
                                         <div className='btns2'>
                                             {job.benefits.map(jb =>
