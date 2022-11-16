@@ -100,15 +100,14 @@ function JobDetails() {
                                         )}
                                     </div>
                                 </div>
-
+                                {/* <button className='back'>&#8678; Return to job board</button> */}
                             </div>
                             <h1 id='contactH1'>Contacts</h1>
 
-
-                            {/* hhhh */}
+                           
                         </div>
 
-
+                       
                     </div>
 
 
@@ -131,11 +130,12 @@ function JobDetails() {
 
 
 
-
+                    
+                   
                 </div>
-
-
+                
             )}
+            <a id='back' href='/' >&#129152; Return to job board</a>
         </div>
 
 
