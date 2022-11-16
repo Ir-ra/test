@@ -6,6 +6,17 @@
     line-height: 25px;
     background: #E6E9F2;  
   } */
+  .details {
+    background:  #ffffff;
+    
+    /* display: grid; */
+    /* grid-template-columns: 1fr 1fr; */
+  }
+  
+ 
+  
+ 
+
 .details h1 {
     font-weight: 700;
     font-size: 28px;
@@ -14,14 +25,16 @@
     border-bottom: 1px solid #ddd;
 }
 
-.container2 {
+.details .container3 {
     background: #ffffff;
     color: #3A4562;
     padding: 24px 15px;
-    /* width: 800px;  */
+    order: 1;
+    
 }
 
-.container2 .card {
+
+.container3 .card {
     padding-bottom: 30px;
 }
 
@@ -32,25 +45,23 @@
     color: rgba(56, 65, 93, 0.82);
 }
 
-.container2 .salary {
+.container3 .salary {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     position: relative;
 }
 
-/* .container2 .card .salary p {
-    margin: 0;
-} */
 
-.container2 .card h2 {
+
+.container3 .card h2 {
     font-weight: 700;
     font-size: 24px;
     line-height: 30px;
     letter-spacing: -0.75px;
 }
 
-.container2 .card h3 {
+.container3 .card h3 {
     font-weight: 700;
     font-size: 20px;
     line-height: 25px;
@@ -60,7 +71,7 @@
 
 }
 
-.container2 .card p {
+.container3 .card p {
 
     font-size: 18px;
     line-height: 24px;
@@ -71,7 +82,7 @@
     /* margin-top: 0px; */
 }
 
-.container2 button {
+.container3 button {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -165,17 +176,21 @@
     color: #988B49;
 }
 
-.contacts {
+.container4  {
     width: 300px;
     height: 400px;
     background: #2A3047;
     border-radius: 8px;
     justify-content: center;
+    /* display: inline-flex; */
+    display: flex;
+    margin: 24px 15px;
+    order: 2;
+    
 }
 
-.contact{
+.cintactInfo{
     color: #ddd;
-    /* font-weight: 700; */
     font-size: 16px;
     line-height: 19px;
     letter-spacing: 0.23619px;
@@ -184,8 +199,7 @@
 }
 
 .contact img{
-   
-    color: rgb(230, 230, 230);
+   color: rgb(230, 230, 230);
 }
 
 
@@ -212,5 +226,26 @@
 
 .mapboxgl-ctrl {
     display: none;
-    /* visibility: hidden; */
+}
+
+
+@media (min-width:800px) {
+    .container3{
+        width: 700px;
+    }
+    
+}
+@media (min-width:1015px) {
+    #contactH1{
+        display: none;
+    }
+    .container1{
+        display:flex;
+      }
+}
+@media (min-width:1240px) {
+    .container3{
+        margin-left: 300px;
+    }
+      
 }

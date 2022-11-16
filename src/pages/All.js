@@ -41,8 +41,9 @@ function All() {
                             
 
                             <div className='left'>
-                                <div><img src={bookmark}/></div> 
-                                {/* <div className='satrs'>&#9733;&#9733;&#9733;&#9733;&#9733;</div> */}
+                                <div><img src={bookmark}/></div>
+                                
+                               
                                 <p>Posted 2 days ago</p>
                             </div>
                         </div>
