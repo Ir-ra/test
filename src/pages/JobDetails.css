@@ -54,6 +54,12 @@ opacity: 0.8;
    display: flex;
 }
 
+/* .posted{
+    display: inline-block;
+    align-items: flex-start;
+    
+} */
+
 .details .container3 .box1 #h1{
     font-weight: 700;
     font-size: 28px;
@@ -117,6 +123,20 @@ opacity: 0.8;
     color: rgba(56, 65, 93, 0.82);
 }
 
+.container3 .card .posted{
+    display: inline-block;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.5625px;
+    color: rgba(56, 65, 93, 0.355988);
+    font-stretch: 100;
+    margin-bottom: 15px;
+    order: 3;
+}
+
 .details .container3  button {
     display: flex;
     flex-direction: row;
@@ -161,37 +181,16 @@ opacity: 0.8;
     margin-left: 10px;
 }
 
-.details .btns {
-    box-sizing: border-box;
+.details .info .btns  {
+   display: flex;
 }
-
-/* .details .btns {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr ;
-    justify-items: center;
+.details .info .btns2  {
+    display: flex;
 }
-.details .btns div{
-    padding: 10px;
-    margin: 5px 10px;
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 16px;
-    text-align: center;
-    letter-spacing: -0.457143px;
-    color: #55699E;
-    background: rgba(161, 177, 219, 0.317343);
-    border: 1px solid rgba(85, 105, 158, 0.3);
-    border-radius: 8px
-}
-.details .btns .btns2 div{
-    background: rgba(255, 207, 0, 0.15);
-    border: 1px solid #FFCF00;
-    color: #988B49; 
-} */
 
 .details .btns button {  
-    
-    display: inline-flex;
+   flex-direction: row;
+   
     padding: 0 auto;
     margin: 5px 10px;
     font-weight: 700;
@@ -206,6 +205,9 @@ opacity: 0.8;
 }
 
 .details .btns2 button {
+    
+    flex-direction: row;
+    margin: 5px 10px;
     background: rgba(255, 207, 0, 0.15);
     border: 1px solid #FFCF00;
     color: #988B49;
@@ -304,6 +306,7 @@ opacity: 0.8;
     .container3{
         margin-left: 300px;
     }
+    
 }
 
 
@@ -334,6 +337,10 @@ opacity: 0.8;
     }
     .details #back{
         display: none;
+    }
+    .container3 .card .posted{
+       
+        top: 250px;
     }
 }
 

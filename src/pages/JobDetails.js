@@ -45,11 +45,13 @@ function JobDetails() {
                                 <h2>{job.title}</h2>
 
                                 <div className='salary'>
+
                                     <p>Brutto, per year</p>
                                     <h3>&#8364; {job.salary}</h3>
                                 </div>
-                            </div>
 
+                            </div>
+                            <div className='posted'>Posted 2 days ago</div>
                             <div className='responsibilities'>
                                 <h3>Responsibilities</h3>
                                 <p>{job.description}</p>
@@ -75,7 +77,7 @@ function JobDetails() {
                             <div className='imgs'>
 
                                 <h1>Attached images</h1>
-                                
+
 
                                 <div className='attach'>
 
@@ -84,30 +86,29 @@ function JobDetails() {
                                     )}
                                 </div>
                             </div>
-
+                            <h1>Additional info</h1>
                             <div className='info'>
-                                <h1>Additional info</h1>
-                                <span>Employment type</span>
+
+                                <p>Employment type</p>
                                 <div className='btns'>
                                     {job.employment_type.map(jb =>
                                         <button>{jb}</button>
                                     )}
-
-                                    <p>Benefits</p>
-                                    <div className='btns2'>
-                                        {job.benefits.map(jb =>
-                                            <button>{jb}</button>
-                                        )}
-                                    </div>
+                                </div>
+                                <p>Benefits</p>
+                                <div className='btns2'>
+                                    {job.benefits.map(jb =>
+                                        <button>{jb}</button>
+                                    )}
                                 </div>
                                 {/* <button className='back'>&#8678; Return to job board</button> */}
                             </div>
                             <h1 id='contactH1'>Contacts</h1>
 
-                           
+
                         </div>
 
-                       
+
                     </div>
 
 
@@ -130,10 +131,10 @@ function JobDetails() {
 
 
 
-                    
-                   
+
+
                 </div>
-                
+
             )}
             <a id='back' href='/' >&#129152; Return to job board</a>
         </div>
