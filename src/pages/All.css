@@ -129,29 +129,28 @@ body {
   color: aqua;
 } */
 
-@media (max-width:800px) {
+@media (max-width:500px) {
   .container .card .left img {
     visibility: hidden;
   }
 
   .container .card .left p {
-    display: flex;
-    align-items: flex-end;
+    display: inline-flex;
+    /* align-items: flex-end; ----------------*/
     position: absolute;
-    right: 2%;
-    top: 0%;
-    bottom: 80%;
+  font-size: 0.7em;
+    /* margin: 0; */
+    bottom: 88%;
+    right: 30px;
+    
   }
 
-  .container .card .left .stars {
-    display: flex;
-    align-items: flex-start;
-  }
+  
 
   .container .card .info a {
     font-size: 18px;
     line-height: 24px;
-    margin-right: 150px;
+    margin-right: 50px;
 
   }
 
