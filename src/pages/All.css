@@ -44,7 +44,7 @@ body {
   font-size: 20px;
   color: #3A4562;
   text-decoration: none;
-  margin-right: 50px;
+  margin-right: 300px;
   padding-top: 30px;
   padding-bottom: 5px;
   /* order: 1; */
@@ -68,6 +68,7 @@ body {
 
 }
 
+
 .container .info img {
   display: inline;
   width: 16px;
@@ -76,6 +77,9 @@ body {
   padding-right: 5px;
 }
 
+.container .left {
+  display: inline-flex;
+}
 
 .container .card .left p {
 
@@ -105,7 +109,27 @@ body {
 
 }
 
-@media (max-width:500px) {
+.container .card .left button {
+  position: absolute;
+  top: 40px;
+  right: 8px;
+  opacity: 0.5;
+  background: #ffffff;
+  border: none;
+  color: #FFFFFF;
+}
+
+.container .card .left .grade {
+  position: absolute;
+  top: 40px;
+  right: 150px;
+}
+
+/* .css-iljtu2-MuiRating-root {
+  color: aqua;
+} */
+
+@media (max-width:800px) {
   .container .card .left img {
     visibility: hidden;
   }
@@ -127,10 +151,18 @@ body {
   .container .card .info a {
     font-size: 18px;
     line-height: 24px;
+    margin-right: 150px;
 
   }
 
   .container .card {
     background: #E6E9F2;
+  }
+  .container .card .left button {
+    display: none;
+  }
+  .container .card .left .grade {
+    top: 10px;
+    left: 115px;
   }
 }
