@@ -58,7 +58,7 @@ function JobDetails() {
                             </div>
 
                             <div>
-                                <h3>Compensation & benefits</h3>
+                                <h3>Compensation & Benefits:</h3>
                                 <ul>
                                     {job.benefits.map(jb =>
                                         <li key={jb}>{jb}</li>

@@ -1,6 +1,6 @@
 //styles
-// import './All.css'
-import './ALLO.css'
+import './All.css'
+
 import bookmark from '../assets/bookmark.svg'
 import star from '../assets/star.svg'
 import location from '../assets/location.svg'
@@ -20,7 +20,7 @@ function All() {
             {jobS && (
 
                 <div >
-                    {/* card */}
+                   
                     {jobS.map((job) => (
                         <div key={job.id} className='card'>
                             <div>
@@ -35,7 +35,7 @@ function All() {
                                         <li key={type}>{type}</li>)}
                                 </ul>
                                 
-                                <p><img src={location}/>location</p>
+                                <p><img src={location}/>Vienna, Austria</p>
                             </div>
 
                             

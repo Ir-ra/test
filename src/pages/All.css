@@ -1,95 +1,136 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+}
 
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    row-gap: 8px;
-    background: #E6E9F2; 
-    /* padding: 60px; */
+  background: #E6E9F2;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  row-gap: 8px;
+
+
+}
+
+.container img {
+  display: flex;
+  align-items: flex-start;
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  margin-top: 30px;
+}
+
+.container .card {
+  position: relative;
+  display: flex;
+  /* justify-content: space-between; */
+  margin: 9px;
+  padding: 10px 5px;
+  background: #ffffff;
+  border-radius: 10.4px;
+  box-shadow: 2px 1px 7px rgba(0, 0, 0, 0.08), 0px 2px 1px -1px rgba(0, 0, 0, 0.04), 0px 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.container .card .info a {
+  display: flex;
+
+  font-weight: 700;
+  font-size: 20px;
+  color: #3A4562;
+  text-decoration: none;
+  margin-right: 50px;
+  padding-top: 30px;
+  padding-bottom: 5px;
+  /* order: 1; */
+}
+
+
+.container .info {
+
+
+
+  font-size: 16px;
+  /* line-height: 15px; */
+  letter-spacing: 0.23619px;
+  color: #878D9D;
+  /* order: 2; */
+  align-self: stretch;
+  position: relative;
+  /* display: flex; */
+  flex-grow: 0;
+  margin: 0 30px;
+
+}
+
+.container .info img {
+  display: inline;
+  width: 16px;
+  height: 16px;
+  opacity: 50%;
+  padding-right: 5px;
+}
+
+
+.container .card .left p {
+
+
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0.23619px;
+  color: #878D9D;
+
+  display: flex;
+  align-items: flex-end;
+  position: absolute;
+  right: 2%;
+  top: 0%;
+  bottom: 5%;
+}
+
+.container .card .left img {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  right: 2%;
+  top: 0%;
+  bottom: 0%;
+  color: #70778B;
+  opacity: 50%;
+
+}
+
+@media (max-width:500px) {
+  .container .card .left img {
+    visibility: hidden;
   }
 
-  .container img{
+  .container .card .left p {
+    display: flex;
+    align-items: flex-end;
+    position: absolute;
+    right: 2%;
+    top: 0%;
+    bottom: 80%;
+  }
+
+  .container .card .left .stars {
     display: flex;
     align-items: flex-start;
-    width: 85px;
-    height: 85px;
-    border-radius: 50%;
+  }
+
+  .container .card .info a {
+    font-size: 18px;
+    line-height: 24px;
+
   }
 
   .container .card {
-    position: relative;
-    display: flex;
-    /* justify-content: space-between; */
-    margin: 9px;
-    padding: 24px 16px;
-    background: #ffffff;
-    border-radius: 10.4px;
-    box-shadow: 2px 1px 7px rgba(0, 0, 0, 0.08), 0px 2px 1px -1px rgba(0, 0, 0, 0.04), 0px 1px 3px rgba(0, 0, 0, 0.12);
+    background: #E6E9F2;
   }
-
-  .container .card a {
-    font-family: 'Proxima Nova';
-    display: flex;
-    order: 1;
-   
-    font-weight: 700;
-    font-size: 20px;
-   
-    color: #3A4562;
-    text-decoration: none;
-  }
-
-  .container .info{
-    margin: 0 10px 0 20px;
-    font-family: 'Proxima Nova';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 25px;
-    letter-spacing: 0.23619px;
-    color: #878D9D;
-    order: 2;
-    align-self: stretch;
-    flex-grow: 0;
-  }
-  .container .card .stars{
-    display: flex;
-    align-items: flex-end;
-    text-align: left;
-  }
-
-  .container .card .left p{
-    font-family: 'Proxima Nova';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 25px;
-   
-    display: flex;
-    align-items: flex-end;
-    text-align: left;
-    /* position: absolute;
-    right: 2%;
-    top: 60%; */
-    /* bottom: 28%; */
-
-    letter-spacing: 0.23619px;
-    color: #878D9D;
-    order: 1;
-  }
-
-
-  .container .card .left img{
-    width: 32px;
-    height: 32px;
-    position: absolute;
-    right: 2%;
-    top: 10%;
-    bottom: 0%;
-    color: #70778B;
-    padding: 10px;
- }
-
-  
-
-  
+}
