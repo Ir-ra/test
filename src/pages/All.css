@@ -13,8 +13,6 @@ body {
   min-height: 100vh;
   margin: 0;
   row-gap: 8px;
-
-
 }
 
 .container img {
@@ -29,7 +27,6 @@ body {
 .container .card {
   position: relative;
   display: flex;
-  /* justify-content: space-between; */
   margin: 9px;
   padding: 10px 5px;
   background: #ffffff;
@@ -39,33 +36,24 @@ body {
 
 .container .card .info a {
   display: flex;
-
   font-weight: 700;
   font-size: 20px;
   color: #3A4562;
   text-decoration: none;
-  margin-right: 300px;
+  margin-right: 250px;
   padding-top: 30px;
   padding-bottom: 5px;
-  /* order: 1; */
 }
 
 
 .container .info {
-
-
-
   font-size: 16px;
-  /* line-height: 15px; */
   letter-spacing: 0.23619px;
   color: #878D9D;
-  /* order: 2; */
   align-self: stretch;
   position: relative;
-  /* display: flex; */
   flex-grow: 0;
   margin: 0 30px;
-
 }
 
 
@@ -109,27 +97,30 @@ body {
 
 }
 
-.container .card .left button {
+.container .card .left .check {
   position: absolute;
-  top: 40px;
+  top: 28px;
   right: 8px;
-  opacity: 0.5;
-  background: #ffffff;
-  border: none;
-  color: #FFFFFF;
+  /* opacity: 0.5; */
+  /* background: #ffffff; */
+  /* border: none; */
+  /* color: #FFFFFF; */
 }
 
 .container .card .left .grade {
   position: absolute;
   top: 40px;
-  right: 150px;
+  right: 110px;
 }
 
-/* .css-iljtu2-MuiRating-root {
-  color: aqua;
-} */
 
-@media (max-width:500px) {
+@media (min-width:750px) {
+  .container .card .left .gradeSmall {
+    display: none;
+  }
+}
+
+@media (max-width:750px) {
   .container .card .left img {
     visibility: hidden;
   }
@@ -138,17 +129,18 @@ body {
     display: inline-flex;
     /* align-items: flex-end; ----------------*/
     position: absolute;
-  font-size: 0.7em;
+    font-size: 0.7em;
     /* margin: 0; */
-    bottom: 88%;
+    bottom: 85%;
     right: 30px;
-    
+
   }
 
-  
+
 
   .container .card .info a {
-    font-size: 18px;
+    font-size: 15px;
+    font-weight: 400px;
     line-height: 24px;
     margin-right: 50px;
 
@@ -157,11 +149,19 @@ body {
   .container .card {
     background: #E6E9F2;
   }
-  .container .card .left button {
+
+  .container .card .left .check {
     display: none;
   }
+
   .container .card .left .grade {
-    top: 10px;
-    left: 115px;
+    display: none;
+  }
+  .container .card .left .gradeSmall {
+    position: absolute;
+    /* top: 7px; */
+    top: 3%;
+    left: 118px;
+   
   }
 }

@@ -13,6 +13,7 @@ function JobDetails() {
     const filteredJobs = JSON.parse(jobs).filter(j => j.id === id)
     const job = filteredJobs.length > 0 ? filteredJobs[0] : null;
     console.log(job)
+    let count = 0;
     return (
 
         <div className='details'>
@@ -80,9 +81,9 @@ function JobDetails() {
 
 
                                 <div className='attach'>
-
+                               
                                     {job.pictures.map(img =>
-                                        <img src={img} />
+                                        <img src={`${img}?count=${++count}`} />
                                     )}
                                 </div>
                             </div>
