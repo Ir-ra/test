@@ -1,27 +1,19 @@
 .details {
-    background:  #ffffff;
-}
-.box1 {
-   display: flex;
-   justify-content:space-between;
+    background: #ffffff;
 }
 
-.separator{
+.separatorA,
+.separatorB {
     border-bottom: 1px solid #ddd;
-}
-.separatorA  {
-    border-bottom: 1px solid #ddd;
-   
-}
-.separatorB{
-    border-bottom: 1px solid #ddd;
-   
 }
 
-.box1 .box1_a {
-    
+.box1,
+.box2 {
+    display: flex;
+    justify-content: space-between;
 }
-.box1 .box1_b{
+
+.box1 .box1_1 {
     display: inline-flex;
     mix-blend-mode: normal;
     opacity: 0.8;
@@ -33,59 +25,44 @@
     color: rgba(56, 65, 93, 0.82);
     overflow: hidden;
     order: 2;
-    
 }
 
-.box1 .box1_b img{
-   width: 40px;
-   height: 40px;
+.box1 .box1_1 img {
+    width: 40px;
+    height: 40px;
 }
-.box1 .box1_b p{
+
+.box1 .box1_1 p {
     margin: 0;
     padding-top: 10px;
-   
 }
 
-#share{
-transform: scale(0.8);
-margin-left: 30px;
-opacity: 0.8;
-
+#share {
+    transform: scale(0.8);
+    margin-left: 30px;
+    opacity: 0.8;
 }
 
-.box2{
-   display: flex;
-}
-
-/* .posted{
-    display: inline-block;
-    align-items: flex-start;
-    
-} */
-
-.details .container3 .box1 #h1{
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 34px;
-    letter-spacing: 0.413333px; 
-}
-.details h1 {
+#h1,
+h1 {
     font-weight: 700;
     font-size: 28px;
     line-height: 34px;
     letter-spacing: 0.413333px;
+}
+
+.details h1 {
     border-bottom: 1px solid #ddd;
 }
 
-
-.details .container3 {
+.details .container2 {
     background: #ffffff;
     color: #3A4562;
     padding: 24px 15px 0;
     order: 1;
 }
 
-.container3 .card {
+.container2 .card {
     padding-bottom: 30px;
 }
 
@@ -96,21 +73,20 @@ opacity: 0.8;
     color: rgba(56, 65, 93, 0.82);
 }
 
-.container3 .salary {
+.container2 .salary {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    position: relative;
 }
 
-.container3 .card h2 {
+h2 {
     font-weight: 700;
     font-size: 24px;
     line-height: 30px;
     letter-spacing: -0.75px;
 }
 
-.container3 .card h3 {
+h3 {
     font-weight: 700;
     font-size: 20px;
     line-height: 25px;
@@ -118,7 +94,7 @@ opacity: 0.8;
     margin-top: 0px;
 }
 
-.container3 .card p {
+.container2 .card p {
     font-size: 18px;
     line-height: 24px;
     letter-spacing: -0.5625px;
@@ -126,7 +102,7 @@ opacity: 0.8;
     color: rgba(56, 65, 93, 0.82);
 }
 
-.container3 .card .posted{
+.container2 .card .posted {
     display: inline-block;
     font-family: 'Roboto';
     font-style: normal;
@@ -140,84 +116,70 @@ opacity: 0.8;
     order: 3;
 }
 
-.details .container3  button {
+.details .container2 button {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin: 20px  5px;
+    margin: 20px 5px;
     background: #384564;
     border-radius: 8px;
     width: 127px;
     height: 20px;
-    /* font-weight: 600; */
     font-size: 10px;
     line-height: 16px;
     text-align: center;
     text-transform: uppercase;
-    padding: 18px 50px;
+    padding: 18px 10px;
     gap: 10px;
     color: #FFFFFF;
 }
 
 .details ul {
     list-style-type: square;
-    
 }
-
-/* .imgs{
-    order: 1;
-}
-.info{
-    order: 2;
-} */
 
 .details .imgs .attach {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    gap: 10px;
 }
 
 .details .imgs img {
     width: 200px;
     height: 116px;
     object-fit: cover;
-    margin-left: 10px;
 }
 
-.details .info .btns  {
-   display: flex;
-}
-.details .info .btns2  {
+.details .info .btns1,
+.btns2 {
     display: flex;
 }
 
-.details .btns button {  
-   flex-direction: row;
-   
+.details .info button {
+    flex-direction: row;
     padding: 0 auto;
     margin: 5px 10px;
-    
     font-size: 12px;
     line-height: 16px;
     text-align: center;
     letter-spacing: -0.457143px;
+}
+
+.details .info .btns1 button {
     color: #55699E;
     background: rgba(161, 177, 219, 0.317343);
     border: 1px solid rgba(85, 105, 158, 0.3);
-    border-radius: 8px;
 }
 
-.details .btns2 button {
-    
-    flex-direction: row;
-    margin: 5px 10px;
+.details .info .btns2 button {
+    color: #988B49;
     background: rgba(255, 207, 0, 0.15);
     border: 1px solid #FFCF00;
-    color: #988B49;
 }
 
-.container4  {
+.map_box {
     width: 300px;
     height: 400px;
     background: #2A3047;
@@ -226,49 +188,40 @@ opacity: 0.8;
     display: flex;
     margin: 24px 15px;
     order: 2;
-    
 }
 
-.cintactInfo{
+.contacts {
     color: #ddd;
     font-size: 16px;
     line-height: 19px;
     letter-spacing: 0.23619px;
     color: #E7EAF0;
-    padding: 15px 30px ;
+    padding: 15px 30px 0 20px;
 }
 
-.contact img{
-   color: rgb(230, 230, 230);
-}
-
-.details #back{
+.details #back {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    
     background: #cad1e2;
-    border-radius: 8px ;
+    border-radius: 8px;
     width: 213px;
     height: 50px;
-    
     font-weight: 600;
     font-size: 12px;
     line-height: 16px;
     margin: 15px 30px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); 
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     opacity: 0.8;
-    mix-blend-mode: normal;
-    text-align: center;
     text-transform: uppercase;
-   
-    gap: 10px;
     color: #3A4562;
-    }
-    .details a {
-        text-decoration: none;
-    }
+}
+
+.details a {
+    text-decoration: none;
+}
+
 /*------------- MAP -------------*/
 .map-container {
     width: 300px;
@@ -281,74 +234,63 @@ opacity: 0.8;
 
 /*------------- MEDIA -------------*/
 @media (min-width:800px) {
-    .container3{
+    .container2 {
         width: 700px;
     }
-    
-    .box2 h2{
+    .box2 h2 {
         width: 500px;
         padding-right: 70px;
-        }
+    }
+    .container2 {
+        margin-left: auto;
+    }
     
 }
 
 @media (min-width:1015px) {
-    #contactH1{
+    #contactH1 {
         display: none;
     }
-    
-    .container1{
-        display:flex;
+    .container1 {
+        display: flex;
     }
-
-      .container3 button{
+    .container2 button {
         margin: 30px 0px;
     }
-    .separatorA{
+    .separatorA {
         visibility: hidden;
     }
-    .container3{
-        margin-left: 300px;
+    .map_box {
+        margin-right: auto;
     }
-    
 }
 
-
 @media (max-width:1015px) {
-    #Bone{
-        display: none; 
+    #btn_1 {
+        display: none;
     }
-    
-    #Btwo {
+    #btn_2 {
         margin: 5px auto 20px;
     }
-
-    #addInfo{
-        display: none;
-    } 
-
-    .box2{
+    .box2 {
         display: block;
     }
-    .box1{
-        display:contents;
+    .box1 {
+        display: contents;
     }
-    .box1 .box1_b{
+    .box1 .box1_1 {
         order: 2;
-        
     }
-    .separatorA{
+    .separatorA {
         visibility: visible;
     }
-    .separatorB{
+    .separatorB {
         visibility: hidden;
     }
-    .details #back{
+    .details #back {
         display: none;
     }
-    .container3 .card .posted{
-       
+    .container2 .card .posted {
         top: 250px;
     }
 }
-
