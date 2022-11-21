@@ -22,7 +22,7 @@ function All() {
 
                         <div key={job.id} className='card'>
                             <div className='frontPic'>
-                                <img src={`${job.pictures[0]}?count=${++count}`} />
+                                <img src={`${job.pictures[0]}?count=${++count}`} alt=''/>
                             </div>
 
                             <div className='info' >
@@ -37,7 +37,7 @@ function All() {
                                             <li key={type}>{type}</li>)}
                                     </ul>
                                 </div>
-                                <p><img src={location} />Vienna, Austria</p>
+                                <p><img src={location} alt=''/>Vienna, Austria</p>
                             </div>
 
                             <div className='right'>

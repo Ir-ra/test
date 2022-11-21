@@ -29,8 +29,8 @@ function JobDetails() {
                                 <div className='separator_mob'></div>
 
                                 <div className='box1_1'>
-                                    <img src={star} /><p>Save to my list</p>
-                                    <img id='share' src={share} /><p>Share</p>
+                                    <img src={star} alt='' /><p>Save to my list</p>
+                                    <img id='share' src={share} alt=''/><p>Share</p>
                                 </div>
                             </div>
 
@@ -71,7 +71,7 @@ function JobDetails() {
 
                                 <div className='imgs'>
                                     {job.pictures.map(img =>
-                                        <img  src={`${img}?count=${++count}`} />
+                                        <img  src={`${img}?count=${++count}`} alt=''/>
                                     )}
                                 </div>
 
@@ -104,7 +104,7 @@ function JobDetails() {
                         <div>
                             <div className='contacts'>
                                 <span><b>{job.name}</b></span>
-                                <p><img src={location} />{job.address}</p>
+                                <p><img src={location} alt=''/>{job.address}</p>
                                 <p><b>Phone:</b> {job.phone}</p>
                                 <p><b>E-mail:</b> {job.email}</p>
                             </div>
