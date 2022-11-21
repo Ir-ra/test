@@ -7,9 +7,9 @@ export default function Map({ coordinates }) {
 
     const mapContainer = useRef(null);
     const map = useRef(null);
-    const [lng, setLng] = useState(coordinates.long);
-    const [lat, setLat] = useState(coordinates.lat);
-    const [zoom, setZoom] = useState(3);
+    const [lng] = useState(coordinates.long);
+    const [lat] = useState(coordinates.lat);
+    const [zoom] = useState(3);
 
     useEffect(() => {
         if (map.current) return; // initialize map only once
@@ -19,6 +19,7 @@ export default function Map({ coordinates }) {
             center: [lng, lat],
             zoom: zoom
         });
+
     });
 
     return (
