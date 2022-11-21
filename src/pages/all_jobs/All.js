@@ -1,24 +1,24 @@
 //styles
 import './All.css'
 
-import location from '../assets/location.svg'
+import location from '../../assets/location.svg'
 
-import { useFetch } from '../hooks/useFetch'
+import { useFetch } from '../../hooks/useFetch'
 import { Link } from 'react-router-dom'
-import IconCheckboxes from '../components/Checkbox'
+import IconCheckboxes from '../../components/Checkbox'
 import { Rating } from '@mui/material'
 
 function All() {
-    const { jobs: jobS, isPending, error } = useFetch()
+    const { jobs, isPending, error } = useFetch()
     let count = 0;
     return (
         <div className='container'>
             {isPending && <div className='loading'>Loading...</div>}
             {error && <div className='error'>{error}</div>}
 
-            {jobS && (
+            {jobs && (
                 <div >
-                    {jobS.map((job) => (
+                    {jobs.map((job) => (
 
                         <div key={job.id} className='card'>
                             <div className='frontPic'>
@@ -40,11 +40,11 @@ function All() {
                                 <p><img src={location} />Vienna, Austria</p>
                             </div>
 
-                            <div className='left'>
+                            <div className='right'>
                                 <div className='grade'><Rating name="size-medium" defaultValue={0} /> </div>
                                 <div className='gradeSmall'> <Rating name="size-small" defaultValue={0} size="small" />  </div>
                                 <div className='check'><IconCheckboxes /></div>
-                                <p>Posted 2 days ago</p>
+                                <p>Posted {job.createdAt.substring(0,10)}</p>  
                             </div>
                         </div>
                     ))}

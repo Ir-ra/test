@@ -8,6 +8,7 @@ export const useFetch = () => {
 
     useEffect(() => {
         const localStorageToken = "wm3gg940gy0xek1ld98uaizhz83c6rh2sir9f9fu";
+        const url = "https://api.json-generator.com/templates/ZM1r0eic3XEy/data";
 
         const fetchData = async () => {
             try {
@@ -15,10 +16,9 @@ export const useFetch = () => {
 
                 if (window.localStorage.getItem('jobs')) {
                     data = window.localStorage.getItem('jobs');
-                    console.log("--------- from local storage ------------------")
+                   
                 } else {
-                    const response = await fetch(
-                        "https://api.json-generator.com/templates/ZM1r0eic3XEy/data",
+                    const response = await fetch(url,
                         {
                             method: "GET",
                             headers: { "Authorization": `Bearer ${localStorageToken}` }
@@ -27,23 +27,23 @@ export const useFetch = () => {
                     if (!response.ok) {
                         throw new Error(`Request failed: ${response.status}`);
                     }
-                    
+
                     data = await response.json();
 
-                    localStorage.setItem('jobs', JSON.stringify(data))  //прочитати про local storage, тпу чому не записує як масив, а тільки як стрінг
+                    localStorage.setItem('jobs', JSON.stringify(data))  
                 }
                 setJobs(JSON.parse(data))
                 setError(null)
                 setIsPending(false)
 
             } catch (error) {
-                if(error.name === "AbortError"){
+                if (error.name === "AbortError") {
                     console.log('the fetch was aborted')
                 } else {
                     setIsPending(false)
                     setError('Could not fetch the data')
                 }
-            } 
+            }
         }
         fetchData()
     }, [])

@@ -64,12 +64,12 @@ body {
   padding-right: 5px;
 }
 
-.container .left {
+.container .right {
   display: inline-flex;
 }
 
-.container .card .left p {
-  font-size: 16px;
+.container .card .right p {
+  font-size: 15px;
   line-height: 25px;
   letter-spacing: 0.23619px;
   color: #878D9D;
@@ -81,13 +81,13 @@ body {
   bottom: 5%;
 }
 
-.container .card .left .check {
+.container .card .right .check {
   position: absolute;
   top: 28px;
   right: 8px;
 }
 
-.container .card .left .grade {
+.container .card .right .grade {
   position: absolute;
   top: 40px;
   right: 150px;
@@ -95,13 +95,13 @@ body {
 
 /*------------- MEDIA -------------*/
 @media (min-width:750px) {
-  .container .card .left .gradeSmall {
+  .container .card .right .gradeSmall {
     display: none;
   }
 }
 
 @media (max-width:750px) {
-  .container .card .left p {
+  .container .card .right p {
     display: flex;
     align-items: flex-start;
     font-size: 0.7em;
@@ -116,19 +116,18 @@ body {
     font-weight: 400px;
     line-height: 24px;
     margin-right: 50px;
-
   }
 
   .container .card {
     background: #eef0f4;
   }
 
-  .container .card .left .check,
+  .container .card .right .check,
   .grade {
     display: none;
   }
 
-  .container .card .left .gradeSmall {
+  .container .card .right .gradeSmall {
     position: absolute;
     top: 4.5%;
     left: 130px;

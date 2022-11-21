@@ -1,18 +1,18 @@
 import './JobDetails.css'
-// import './JD.scss'
 
 import { useParams } from 'react-router-dom'
-import Map from '../components/Map';
-import location from '../assets/location.svg'
-import star from '../assets/star.svg'
-import share from '../assets/share.svg'
+import Map from '../../components/Map';
+import location from '../../assets/location.svg'
+import star from '../../assets/star.svg'
+import share from '../../assets/share.svg'
+
 
 function JobDetails() {
     const { id } = useParams()
-    const jobs = window.localStorage.getItem('jobs');
-    const filteredJobs = JSON.parse(jobs).filter(j => j.id === id)
+    const jobs = window.localStorage.getItem('jobs'); 
+    const filteredJobs = JSON.parse(jobs).filter(j => j.id === id) 
     const job = filteredJobs.length > 0 ? filteredJobs[0] : null;
-    console.log(job)
+    
 
     let count = 0;
     return (
@@ -26,7 +26,7 @@ function JobDetails() {
 
                             <div className='box1'>
                                 <span id='h1'>Job Details</span>
-                                <div className='separatorA'></div>
+                                <div className='separator_mob'></div>
 
                                 <div className='box1_1'>
                                     <img src={star} /><p>Save to my list</p>
@@ -34,8 +34,8 @@ function JobDetails() {
                                 </div>
                             </div>
 
-                            <div className='separatorB'></div>
-                            <button id='btn_1'>Apply now</button>
+                            <div className='separator'></div>
+                            <button id='apply_1'>Apply now</button>
 
                             <div className='box2'>
                                 <h2>{job.title}</h2>
@@ -46,9 +46,9 @@ function JobDetails() {
                                 </div>
                             </div>
 
-                            <div className='posted'>Posted 2 days ago</div>
+                            <div className='posted'>Posted {job.createdAt.substring(0,10)}</div>
 
-                            <div className='responsibilities'>
+                            <div>
                                 <h3>Responsibilities</h3>
                                 <p>{job.description}</p>
                             </div>
@@ -56,23 +56,22 @@ function JobDetails() {
                             <div>
                                 <h3>Compensation & Benefits:</h3>
                                 <ul>
-                                    {job.benefits.map(jb =>
-                                        <li key={jb}>{jb}</li>
+                                    {job.benefits.map(benefit =>
+                                        <li key={benefit}>{benefit}</li>
                                     )}
                                 </ul>
                             </div>
 
-
-                            <button id='btn_2'>Apply now</button>
+                            <button id='apply_2'>Apply now</button>
                         </div>
 
                         <div>
-                            <div className='imgs'>
+                            <div className='attached_imgs'>
                                 <h1>Attached images</h1>
 
-                                <div className='attach'>
+                                <div className='imgs'>
                                     {job.pictures.map(img =>
-                                        <img src={`${img}?count=${++count}`} />
+                                        <img  src={`${img}?count=${++count}`} />
                                     )}
                                 </div>
 
@@ -80,18 +79,18 @@ function JobDetails() {
 
                             <h1>Additional info</h1>
 
-                            <div className='info'>
+                            <div className='additional'>
                                 <p>Employment type</p>
-                                <div className='btns1'>
-                                    {job.employment_type.map(jb =>
-                                        <button>{jb}</button>
+                                <div className='empl_type'>
+                                    {job.employment_type.map(type =>
+                                        <span key={type}>{type}</span>
                                     )}
                                 </div>
 
                                 <p>Benefits</p>
-                                <div className='btns2'>
-                                    {job.benefits.map(jb =>
-                                        <button>{jb}</button>
+                                <div className='benefits'>
+                                    {job.benefits.map(benefit =>
+                                        <span key={benefit}>{benefit}</span>
                                     )}
                                 </div>
 

@@ -2,8 +2,8 @@
     background: #ffffff;
 }
 
-.separatorA,
-.separatorB {
+.separator_mob,
+.separator {
     border-bottom: 1px solid #ddd;
 }
 
@@ -124,6 +124,7 @@ h3 {
     margin: 20px 5px;
     background: #384564;
     border-radius: 8px;
+    border: 1px solid;
     width: 127px;
     height: 20px;
     font-size: 10px;
@@ -133,47 +134,57 @@ h3 {
     padding: 18px 10px;
     gap: 10px;
     color: #FFFFFF;
+    transition: all 0.1s;
+}
+.details .container2 button:hover {
+    background: #637399;
+    cursor: pointer;
 }
 
 .details ul {
     list-style-type: square;
 }
 
-.details .imgs .attach {
+.details .attached_imgs .imgs {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     gap: 10px;
 }
 
-.details .imgs img {
+.details .attached_imgs img {
     width: 200px;
     height: 116px;
     object-fit: cover;
 }
 
-.details .info .btns1,
-.btns2 {
+.details .additional .empl_type,
+.benefits {
     display: flex;
 }
 
-.details .info button {
+.details .additional span {
     flex-direction: row;
     padding: 0 auto;
-    margin: 5px 10px;
+    margin: 5px;
+    column-gap: 10px;
+    font-weight: 700;
     font-size: 12px;
     line-height: 16px;
     text-align: center;
     letter-spacing: -0.457143px;
+    border-radius: 8px;
+    padding: 10px 18px;
+    width: 120px;
 }
 
-.details .info .btns1 button {
+.details .additional .empl_type span {
     color: #55699E;
     background: rgba(161, 177, 219, 0.317343);
     border: 1px solid rgba(85, 105, 158, 0.3);
 }
 
-.details .info .btns2 button {
+.details .additional .benefits span {
     color: #988B49;
     background: rgba(255, 207, 0, 0.15);
     border: 1px solid #FFCF00;
@@ -196,7 +207,7 @@ h3 {
     line-height: 19px;
     letter-spacing: 0.23619px;
     color: #E7EAF0;
-    padding: 15px 30px 0 20px;
+    padding: 16px 30px ;
 }
 
 .details #back {
@@ -216,10 +227,15 @@ h3 {
     opacity: 0.8;
     text-transform: uppercase;
     color: #3A4562;
+    transition: all 0.1s;
 }
 
 .details a {
     text-decoration: none;
+}
+.details #back:hover {
+    background: #d9dfea;
+    cursor: pointer;
 }
 
 /*------------- MAP -------------*/
@@ -257,7 +273,7 @@ h3 {
     .container2 button {
         margin: 30px 0px;
     }
-    .separatorA {
+    .separator_mob {
         visibility: hidden;
     }
     .map_box {
@@ -266,10 +282,10 @@ h3 {
 }
 
 @media (max-width:1015px) {
-    #btn_1 {
+    #apply_1 {
         display: none;
     }
-    #btn_2 {
+    #apply_2 {
         margin: 5px auto 20px;
     }
     .box2 {
@@ -281,10 +297,10 @@ h3 {
     .box1 .box1_1 {
         order: 2;
     }
-    .separatorA {
+    .separator_mob {
         visibility: visible;
     }
-    .separatorB {
+    .separator {
         visibility: hidden;
     }
     .details #back {
